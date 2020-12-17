@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!-- configure java.util.Date class to bean -->
+<bean id="dt" class="java.util.Date"/><!-- Dependent class -->
+<!-- configure wish massager genereator -->
+<bean id="wmg" class="com.nt.beans.WishmassageGenrator"><!-- Target class -->
+<constructor-arg name="date" ref="dt"/>
+<!-- constroctor injustion having dt id based -->
+</bean>
+</beans>
